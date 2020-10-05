@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+   <title>Search GIF</title>
+</head>
+<body>
+   <div class="main-section">
+      <section class="search-wrapper">
+         <div class="title">Gif Search</div>
+         <form>
+            <input type="text" placeholder="What are you looking for?" #searchInput class="search-bar" 
+            (keydown.enter)="searchGIF()"/>
+            <select class="dropdown-container">
+               <option value="0">Show all</option>
+            </select>
+            <button type="button" (click)="searchGIF()" class="search-button"><i class="fa fa-search"></i></button>
+         </form>
+          <div class="info">You can search any gif with our search</div>
+          <div class="meta-info">Everything you need for your creative projects, websites, banner presentation, magazines and advertising.</div>
+      </section>
+   </div>
+   <div>
+   </div>
+   <div class="imageGrid">
+      <ng-container *ngFor="let img of images">
+              <img class="tile" src={{img.images.original.url}}>
+       </ng-container>
+       <div class="clear"></div>
+   </div>
+
+
+   <footer class="footer-container">
+      <section class="footer-content">
+         <div class="sign-up">
+            <div>Sign up and</div><div> get free content every week.</div>
+            <form action="/action_page.php">
+               <input type="text" placeholder="Enter you email..." name="search" class="text-box" />
+            </form>
+            <button type="submit" class="sign-up-btn">Sign up</button>
+         </div>
+  
+         <div>
+            <div class="footer-title">Browse by catagories</div>
+            <div class="list-wrapper">
+            <div class="list-section">
+               <ul>
+                  <li> <a href="#" target="_blank">Graphics</a> </li>
+                  <li> <a href="#" target="_blank">PSDs</a> </li>
+                  <li><a href="#" target="_blank">Icons</a>  </li>
+                  <li> <a href="#" target="_blank">Templates</a> </li>
+                  <li> <a href="#" target="_blank">Themes</a> </li>
+               </ul>
+            </div>
+            <div class="list-section">
+               <ul>
+                  <li> <a href="#" target="_blank">Addons</a> </li>
+                  <li> <a href="#" target="_blank">Fonts</a> </li>
+                  <li> <a href="#" target="_blank">Textures</a> </li>
+                  <li> <a href="#" target="_blank">Patterns</a> </li>
+                  <li> <a href="#" target="_blank">Backgrounds</a> </li>
+               </ul>
+            </div>
+            <div class="list-section">
+               <ul>
+                  <li> <a href="#" target="_blank">Buttons</a> </li>
+                  <li> <a href="#" target="_blank">Forms</a> </li>
+                  <li> <a href="#" target="_blank">GUI</a> </li>
+                  <li>  <a href="#" target="_blank">Navigation</a></li>
+                  <li>  <a href="#" target="_blank">UI kits</a></li>
+               </ul>
+            </div>
+            <div class="list-section">
+               <ul>
+                  <li><a href="#" target="_blank">Inforgraphics</a> </li>
+                  <li><a href="#" target="_blank">Graphs</a>  </li>
+                  <li> <a href="#" target="_blank">Logos</a> </li>
+                  <li><a href="#" target="_blank">Vectors</a>  </li>
+                  <li><a href="#" target="_blank">Business Cards</a></li>
+               </ul>
+            </div>
+            </div>
+         </div>
+      </section>
+      <section class="copy-right-wrapper">
+         <div class="links">
+            <span> Affiliates</span>
+            <span class="seprator">/</span>
+            <span>Contributors</span>
+            <span class="seprator">/</span>
+            <span>Press</span>
+            <span class="seprator">/</span>
+            <span>Media</span>
+            <span class="seprator">/</span>
+            <span>Career</span>
+            <span class="seprator">/</span>
+            <span>About</span>
+            <span class="seprator">/</span>
+            <span>Contact</span>
+         </div>
+         <div class="social-icons">
+                <a href="#" target="_blank"><i class="fa fa-facebook circle"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-twitter circle"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-google-plus circle"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-wifi circle"></i></a>
+         </div>
+         <div class="copyright">
+            Copyright 2018 myCompany all rights reserved.
+         </div>
+      </section>
+   </footer>
+</body>
